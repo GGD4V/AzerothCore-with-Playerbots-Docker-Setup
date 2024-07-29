@@ -52,11 +52,11 @@ if [ -d "azerothcore-wotlk" ]; then
     fi
 else
     if ask_user "Download and install AzerothCore Playerbots?"; then
-        git clone https://github.com/liyunfan1223/azerothcore-wotlk.git --branch=Playerbot
+        git clone https://github.com/GGD4V/azerothcore-wotlk.git --branch=Playerbot
         cp src/.env azerothcore-wotlk/
         cp src/*.yml azerothcore-wotlk/
         cd azerothcore-wotlk/modules
-        git clone https://github.com/liyunfan1223/mod-playerbots.git --branch=master
+        git clone https://github.com/GGD4V/mod-playerbots.git --branch=master
         cd ..
         if [ ! -d "wotlk" ]; then 
             mkdir -p wotlk/etc
@@ -84,9 +84,7 @@ if ask_user "Install modules?"; then
     fi
     }
 
-    install_mod "mod-aoe-loot" "https://github.com/azerothcore/mod-aoe-loot.git"
-    install_mod "mod-learn-spells" "https://github.com/azerothcore/mod-learn-spells.git"
-    install_mod "mod-fireworks-on-level" "https://github.com/azerothcore/mod-fireworks-on-level.git"
+    install_mod "mod-ah-bot" "https://github.com/GGD4V/mod-ah-bot.git"
 
     cd ..
 
